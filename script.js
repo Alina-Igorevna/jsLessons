@@ -1,16 +1,23 @@
 'use strict';
 
-let ansvers = [],
-    questions = [
-      'Как ваше имя?',
-      'Как ваша фамилия?',
-      'Сколько вам лет?'
-    ];
+let money = prompt("Ваш бюджет на месяц?"),
+    time = prompt("Введите дату в формате YYYY-MM-DD", ''),
+    appData = {
+      budget: money,
+      timeData: time,
+      expenses: {},
+      optionalExpenses: {},
+      income: [],
+      savings: false 
+    };
 
-let person = {
-  name: "John",
-  age: 25,
+let question1 = prompt("Введите обязательную статью расходов в этом месяце"), 
+    question2 = prompt("Во сколько обойдется?"),      
+    question3 = prompt("Введите обязательную статью расходов в этом месяце"), 
+    question4 = prompt("Во сколько обойдется?");     
 
-}
+appData.expenses[question1] = question2;
+appData.expenses[question3] = question4;
 
-cin
+alert(appData.budget / 30);
+
